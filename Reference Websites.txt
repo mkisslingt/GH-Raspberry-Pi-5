@@ -1,0 +1,28 @@
+Material List & Reference:
+1) x1 Raspberry Pi 5: https://www.raspberrypi.com/products/raspberry-pi-5/
+2) x1 Raspberry Pi Active Cooler: https://www.raspberrypi.com/products/active-cooler/
+3) x1 Raspberry Pi AI HAT+ 2: https://www.raspberrypi.com/products/ai-hat-plus-2/
+4) x1 Raspberry Pi 27W USB-C Power Supply Black US: https://www.pishop.us/product/raspberry-pi-27w-usb-c-power-supply-black-us/?searchid=0&search_query=Raspberry+Pi+27W+USB-C+Power+Supply+Black+US
+5) x1 Industrial Grade Metal Case (D) for Raspberry Pi 5, Wall and Rail mount: https://www.pishop.us/product/industrial-grade-metal-case-d-for-raspberry-pi-5-wall-and-rail-mount/?searchid=0&search_query=Industrial+Grade+Metal+Case+%28D%29+for+Raspberry+Pi+5%2C+Wall+and+Rail+mount
+6) x1 Micro-HDMI to Standard HDMI (A/M), 2m Cable, Black: https://www.pishop.us/product/micro-hdmi-to-standard-hdmi-a-m-2m-cable-black/?searchid=0&search_query=Micro-HDMI+to+Standard+HDMI+%28A%2FM%29%2C+2m+Cable%2C+Black
+7) x1 Camera Cable for Raspberry Pi 5: https://www.pishop.us/product/camera-cable-for-raspberry-pi-5/?searchid=0&search_query=Camera+Cable+for+Raspberry+Pi+5
+8) x1 WAVE ROVER: https://www.waveshare.com/wave-rover.htm?sku=253763
+9) x3 MOLICEL P30B 18650 3000MAH 30A BATTERY: https://www.18650batterystore.com/products/molicel-p30b-18650-3000mah-36a-battery?variant=43305096151191
+10) x1 Arducam for Raspberry Pi Camera Module 3 Wide, 120°(D) IMX708 Autofocus Pi Camera V3, 15cm 15-22 Pin FFC Cable: https://www.amazon.com/dp/B0C5D97DRJ?ref_=ppx_hzod_title_dt_b_fed_asin_title_3_2
+11) x1 ELEGOO 5PCS HC-SR04 Ultrasonic Module Distance Sensor Compatible with Arduino UNO MEGA Nano Robot XBee ZigBee: https://www.amazon.com/dp/B01COSN7O6?ref_=ppx_hzod_title_dt_b_fed_asin_title_0_0
+12) x1 SANDISK 256GB Extreme microSDXC UHS-I Memory Card with Adapter - C10, U3, V30, 4K, 5K, A2, Micro SD Card - SDSQXAV-256G-GN6MA: https://www.amazon.com/dp/B09X7CRKRZ?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_2&th=1
+13) x1 XTAR VC4SL Upgrade Version VC4S Smart Rechargeable Battery Charger Type C 4 Bay Fast 18650 Charger with LCD for 3.7V 3.6V Li-ion Battery 10440 14500 18650 21700 26650 and Ni-MH Ni-CD AA AAA: https://www.amazon.com/dp/B09MT1ZSKL?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_0
+14) x1 365pcs M2.5 Black Male Female Nylon Hex Spacer Standoff Screw Nut Set Assortment Kit Motherboard Standoffs Mounts Screws for PCB Motherboard Circuit Board Raspberry Pi and Hats: https://www.amazon.com/dp/B0FPMC9917?ref_=ppx_hzod_title_dt_b_fed_asin_title_2_1
+15) x1 HiLetgo 3pcs HC-SR501 PIR Infrared Sensor Human Body Infrared Motion Module for Arduino Raspberry Pi: https://www.amazon.com/dp/B07KZW86YR?ref_=ppx_hzod_title_dt_b_fed_asin_title_3_0
+16) x1 BOJACK 3 Values 130 Pcs Solderless Breadboard 4 Pcs 830 Tie Points & 400 Tie Points & 126 Pcs Flexible Breadboard Jumper Wires: https://www.amazon.com/dp/B08Y59P6D1?ref_=ppx_hzod_title_dt_b_fed_asin_title_3_1
+17) x1 Arducam for Raspberry Pi Camera Module 3 Wide, 120°(D) IMX708 Autofocus Pi Camera V3, 15cm 15-22 Pin FFC Cable: https://www.amazon.com/dp/B0C5D97DRJ?ref_=ppx_hzod_title_dt_b_fed_asin_title_3_2
+18) x1 Arducam Upgraded Camera Pan Tilt Platform Compatible with Raspberry Pi Camera Module 3/V1/V2, Nvidia Jetson Board: https://www.amazon.com/dp/B08PK9N9T4?ref_=ppx_hzod_title_dt_b_fed_asin_title_3_3
+19) x1 HiLetgo 2pcs DHT22/AM2302 Digital Temperature and Humidity Sensor Module Temperature Humidity Monitor Sensor Replace SHT11 SHT15 for Arduino Electronic Practice DIY: https://www.amazon.com/dp/B0795F19W6?ref_=ppx_hzod_title_dt_b_fed_asin_title_3_5&th=1
+
+
+Reference Websites:
+1) https://hailo.ai/products/hailo-software/model-explorer/generative-ai/
+2) https://github.com/hailo-ai/hailo-apps
+3) https://www.raspberrypi.com/documentation/computers/ai.html
+4) https://www.raspberrypi.com/documentation/computers/getting-started.html#setting-up-your-raspberry-pi
+5) https://www.waveshare.com/wiki/WAVE_ROVER

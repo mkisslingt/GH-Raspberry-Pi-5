@@ -1,0 +1,25 @@
+GUIA DE CABLEADO - WAVE ROVER + PI 5 + ARDUCAM
+
+1. CONEXION DE SERVOS (PAN-TILT):
+   Pines en Wave Rover: D V G (S1, S2, etc.)
+   Cable del Servo (Blanco/Rojo/Negro):
+   - BLANCO  --> D (Datos / Signal)
+   - ROJO    --> V (Voltaje / 5V)
+   - NEGRO   --> G (GND / Tierra)
+
+2. CONEXION PI 5 - WAVE ROVER:
+   - CABLE USB: De puerto USB-A en la Pi al puerto USB-C en el Wave Rover.
+
+3. CONEXION DE IA (HAILO-10H):
+   - Debe estar en el puerto PCIe con el cable FPC pequeno.
+   - Velocidad: PCIe Gen 3 (dtparam=pciex1_gen=3).
+
+4. CONEXION DE CAMARA (ARDUCAM IMX708):
+   - CABLE BLANCO (22 a 22 pines): De la camara al puerto CAM1 de la Pi.
+   - Orientacion Pi: Contactos hacia los puertos HDMI.
+   - Orientacion Camara: Contactos hacia la placa verde.
+
+COMANDOS SERIALES (JSON):
+- MOTORES: {"T":1,"L":velocidad,"R":velocidad} (Vel: -255 a 255)
+- SERVOS PWM: {"T":101,"id":1,"pos":90} (Pos: 0 a 180)
+- SERVOS BUS (Alternativa): {"T":3,"S1":90,"S2":90}
