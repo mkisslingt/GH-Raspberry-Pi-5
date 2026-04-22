@@ -9,8 +9,10 @@ This document outlines the roadmap for transitioning from a stationary tracker t
 
 ## 🏎 Phase 2: Full Mobility (The Move)
 - [x] **Motor Logic:** Enable `send_motor_cmd` in `follow_me.py`.
-- [x] **Distance Scaling:** Use bounding box size to determine if the robot should move forward/backward.
-- [x] **Turning:** Rotate the chassis if the Pan angle exceeds comfort limits.
+- [x] **Distance Scaling:** Proportional scaling based on bounding box height.
+- [x] **Turning:** Proportional chassis rotation with coordinate compensation.
+- [x] **Golden Mix Derived:** Left side inversion handled (`L: -base + turn`).
+- [x] **Mechanical Alignment:** Center fixed at `Pan 72, Tilt 10`.
 
 ## 🧠 Phase 3: Hailo-10H Power Play
 - [ ] **Local LLM:** Install `hailo-genai` and run a local model.
@@ -18,5 +20,6 @@ This document outlines the roadmap for transitioning from a stationary tracker t
 - [ ] **Voice Control:** Add a microphone for natural language commands.
 
 ## ⚠️ Notes
-- Keep an eye on battery voltage during mobility tests.
-- Ensure the USB-C cable to the Pi is secure during movement.
+- **Power Critical:** Pi 5 reports `Undervoltage` during mobility. Ensure batteries are full or use the official 27W (5A) supply.
+- **Web Stream:** Integrated into `follow_me.py` at `http://<pi-ip>:8080` for debugging.
+- **Safety:** Motor speeds are currently set to a 'Crawl' (12) for low-power stability.
