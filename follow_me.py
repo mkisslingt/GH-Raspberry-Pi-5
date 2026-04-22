@@ -43,7 +43,7 @@ class WaveRoverAI:
         self.update_neck(0, 0)
 
     def send_motor_cmd(self, left, right):
-        cmd = {"T":1, "L": 0, "R": 0}
+        cmd = {"T":1, "L": left, "R": right}
         try:
             self.ser.write((json.dumps(cmd) + '\n').encode())
         except: pass
@@ -119,7 +119,7 @@ class WaveRoverAI:
                                 # Dibujar
                                 cv2.circle(frame, (int(cx*640), int(fy*480)), 8, (0,0,255), -1)
                                 
-                                # Movimiento suave
+                                # Movimiento suave del cuello
                                 pm, tm = 0, 0
                                 if cx < 0.44: pm = -1
                                 elif cx > 0.56: pm = 1
@@ -127,7 +127,33 @@ class WaveRoverAI:
                                 elif fy > 0.56: tm = -1
                                 
                                 self.update_neck(pm, tm)
-                                print(f"Pan:{int(self.pan_rel):3}° | Tilt:{int(self.tilt_rel):3}° | Conf:{max_score:.2f}", end="\r")
+
+                                # --- LOGICA DE MOVIMIENTO CHASIS ---
+                                box_height = ymax - ymin
+                                base_speed = 0
+                                if box_height < 0.45:    # Muy lejos
+                                    base_speed = 60
+                                elif box_height > 0.65:  # Muy cerca
+                                    base_speed = -60
+                                
+                                turn_speed = 0
+                                if self.pan_rel > 20:    # Mirando a la izquierda
+                                    turn_speed = 40
+                                elif self.pan_rel < -20: # Mirando a la derecha
+                                    turn_speed = -40
+                                
+                                # Mix motors (L = base - turn, R = base + turn)
+                                l_motor = base_speed - turn_speed
+                                r_motor = base_speed + turn_speed
+                                
+                                # Safety caps
+                                l_motor = max(-100, min(100, l_motor))
+                                r_motor = max(-100, min(100, r_motor))
+                                
+                                self.send_motor_cmd(int(l_motor), int(r_motor))
+                                print(f"Pan:{int(self.pan_rel):3}° | L:{int(l_motor):4} | R:{int(r_motor):4} | Conf:{max_score:.2f}", end="\r")
+                            else:
+                                self.send_motor_cmd(0, 0)
 
                             cv2.imshow('WaveRover Final Calibration', frame)
                             if cv2.waitKey(1) & 0xFF == ord('q'): break

@@ -1,25 +1,28 @@
-# WaveRover AI - Raspberry Pi 5 + Hailo-10H
+# WaveRover-MKT AI: Raspberry Pi 5 + Hailo-10H
 
-Autonomous AI Robot built on the WaveRover platform, powered by Raspberry Pi 5 and accelerated by the Hailo-10H AI HAT+.
+This repository contains the software for an autonomous tracking robot built on the **WaveRover** chassis, powered by a **Raspberry Pi 5** with a **Hailo-10H** M.2 AI accelerator.
 
-## 🚀 Project Overview
-- **Brain:** Raspberry Pi 5 (8GB)
-- **AI Accelerator:** Hailo-10H (GenAI capable)
-- **Vision:** Arducam IMX708 (HDR, Autofocus)
-- **Platform:** WaveRover (4WD, ESP32 Serial Control)
-- **Tracking:** Pan/Tilt servo mechanism for face/object tracking.
+## Status: Full Mobility (Phase 2 Complete)
+The robot is no longer stationary. It can track a person, move forward to follow, move backward if the person is too close, and rotate its chassis to keep the target centered.
 
-## 🛠 Current Progress
-- [x] Hardware Assembly & Wiring.
-- [x] Hailo Zen API Integration (YOLOv8 face detection).
-- [x] Pan/Tilt Calibration & Physical Centering.
-- [x] Camera Pipe setup (rpicam-vid to OpenCV).
+### Core Logic
+- **Detection:** YOLOv8 running on Hailo-10H (720p @ 30fps).
+- **Neck (Pan-Tilt):** Arducam IMX708 follows the person's upper body.
+- **Mobility:**
+  - **Distance Scaling:** Uses bounding box height to maintain a constant distance (~0.5-1m).
+  - **Chassis Turning:** Rotates the entire chassis when the camera pan exceeds ±20°.
+  - **Safety:** Motor speeds are capped at 100/255 for initial testing.
 
-## 📡 Remote Brain Workflow
-This project uses a "Remote Brain" setup:
-1. **Development:** Gemini CLI on Host Mac.
-2. **Execution:** Raspberry Pi 5 (via SSH/SSHFS).
-3. **Storage:** GitHub (Sync & Version Control).
+## Phase 3: Hailo-10H Power Play (Coming Soon)
+The next stage is to leverage the full 40 TOPS of the Hailo-10H to run:
+- **Local LLMs:** Use `hailo-genai` for natural language reasoning.
+- **Vision-Language Models (VLM):** Describe surroundings and navigate based on high-level instructions.
+- **Voice Commands:** Adding microphone and speaker for interaction.
+
+## Setup & Workflow
+- **SSH Alias:** Use `ssh rover` to connect (`WaveRover-MKT.local`).
+- **Mount:** `sshfs rover:/home/pi5-mkt ~/WaveRover` to edit files locally.
+- **Run:** `python3 follow_me.py`
 
 ## 📄 License
 MIT
